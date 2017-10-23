@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/android_me_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:weightSum="7">
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/step_detail_video_cv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            card_view:cardCornerRadius="4dp"
+            android:layout_margin="5dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/step_video_player"
+                    ></com.google.android.exoplayer2.ui.SimpleExoPlayerView>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/step_detail_cv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            card_view:cardCornerRadius="4dp"
+            android:layout_margin="5dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:text="Ingredients"
+                    android:layout_width="match_parent"
+                    android:textStyle="italic"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:weightSum="2">
+                <Button
+                    android:id="@+id/previous_step_button"
+                    android:text="Previous"
+                    android:textColor="#FFFFFF"
+                    android:background="@color/colorPrimary"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+                <Button
+                    android:id="@+id/next_step_button"
+                    android:text="Next"
+                    android:textColor="#FFFFFF"
+                    android:background="@color/colorPrimary"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+
+
+
+    </LinearLayout>
+</ScrollView>
